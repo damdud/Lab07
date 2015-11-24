@@ -1,4 +1,5 @@
 ﻿using System;
+using UamTTA.Model;
 
 namespace UamTTA
 {

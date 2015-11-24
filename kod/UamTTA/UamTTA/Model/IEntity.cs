@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UamTTA
+namespace UamTTA.Model
 {
     public interface IEntity : ICloneable
     {

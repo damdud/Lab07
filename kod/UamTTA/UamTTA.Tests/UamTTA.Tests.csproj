@@ -58,11 +58,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BudgetFactoryTests.cs" />
-    <Compile Include="EnumerableExtensionsTests.cs" />
-    <Compile Include="EfRepositoryTests.cs" />
+    <Compile Include="Services\BudgetFactoryTests.cs" />
+    <Compile Include="Services\BudgetServiceTests.cs" />
+    <Compile Include="Tools\EnumerableExtensionsTests.cs" />
+    <Compile Include="Storage\RepositoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="InMemoryRepositoryTests.cs" />
+    <Compile Include="Storage\InMemoryRepositoryTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -74,6 +75,7 @@
       <Name>UamTTA</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

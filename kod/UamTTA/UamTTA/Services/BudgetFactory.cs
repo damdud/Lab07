@@ -1,13 +1,14 @@
 ﻿using System;
+using UamTTA.Model;
 
-namespace UamTTA
+namespace UamTTA.Services
 {
     public class BudgetFactory : IBudgetFactory
     {
         public Budget CreateBudget(BudgetTemplate template, DateTime startDate)
         {
-            DateTime endDate = default(DateTime);
-            switch (template.DefaultDuration)
+            var endDate = default(DateTime);
+            switch (template.Duration)
             {
                 case Duration.Weekly:
                     endDate = AddWeek(startDate);
@@ -27,7 +28,7 @@ namespace UamTTA
                     throw new ArgumentOutOfRangeException();
             }
 
-            return new Budget(startDate, endDate);
+            return new Budget {ValidFrom = startDate, ValidTo = endDate};
         }
 
         private static DateTime AddWeek(DateTime startDate)
@@ -37,9 +38,9 @@ namespace UamTTA
 
         private static DateTime AddMonth(DateTime startDate)
         {
-            DateTime endDate = startDate.AddMonths(1);
-            int daysInStartDate = DateTime.DaysInMonth(startDate.Year, startDate.Month);
-            int daysInNextMonth = DateTime.DaysInMonth(endDate.Year, endDate.Month);
+            var endDate = startDate.AddMonths(1);
+            var daysInStartDate = DateTime.DaysInMonth(startDate.Year, startDate.Month);
+            var daysInNextMonth = DateTime.DaysInMonth(endDate.Year, endDate.Month);
             if (daysInNextMonth >= 30 && (endDate.Day < daysInNextMonth || daysInNextMonth == daysInStartDate))
                 endDate = endDate.AddDays(-1);
             return endDate;

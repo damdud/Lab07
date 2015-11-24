@@ -1,9 +1,9 @@
-﻿using System;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Web.Http;
 using Autofac;
 using Autofac.Integration.WebApi;
 using Newtonsoft.Json.Serialization;
+using UamTTA.Services;
 using UamTTA.Storage;
 
 namespace UamTTA.Api
@@ -32,7 +32,7 @@ namespace UamTTA.Api
         {
             builder.Register(_ => new UamTTAContext()).As<UamTTAContext>();
             builder.RegisterType<BudgetFactory>().As<IBudgetFactory>();
-            builder.RegisterGeneric(typeof(EFRepository<>)).As(typeof(IRepository<>));
+            builder.RegisterGeneric(typeof (Repository<>)).As(typeof (IRepository<>));
         }
     }
 }

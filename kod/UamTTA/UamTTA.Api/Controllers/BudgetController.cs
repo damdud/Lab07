@@ -1,7 +1,6 @@
-﻿using System.Net.Http;
-using System.Web.Http;
-using System.Web.Routing;
+﻿using System.Web.Http;
 using UamTTA.Api.Models;
+using UamTTA.Model;
 using UamTTA.Storage;
 
 namespace UamTTA.Api.Controllers
@@ -21,10 +20,10 @@ namespace UamTTA.Api.Controllers
         [HttpPost]
         public IHttpActionResult CreateTemplate(CreateTemplateModel parameter)
         {
-            var template = new BudgetTemplate(parameter.Duration, parameter.Name);
+            var template = new BudgetTemplate {Duration = parameter.Duration, Name = parameter.Name};
             _templateRepository.Persist(template);
 
-            return CreatedAtRoute("GetTemplateById", new { id = template.Id }, template);
+            return CreatedAtRoute("GetTemplateById", new {id = template.Id}, template);
         }
 
         [Route("api/budget/getTemplate/{id}", Name = "GetTemplateById")]
@@ -32,7 +31,7 @@ namespace UamTTA.Api.Controllers
         public TemplateModel GetTemplate(int id)
         {
             var template = _templateRepository.FindById(id);
-            return new TemplateModel { Duration = template.DefaultDuration, Name = template.DefaultName };
+            return new TemplateModel {Duration = template.Duration, Name = template.Name};
         }
     }
 }

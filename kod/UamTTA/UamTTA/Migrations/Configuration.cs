@@ -1,15 +1,16 @@
+using System.Data.Entity.Migrations;
+using UamTTA.Storage;
+
 namespace UamTTA.Migrations
 {
-    using System.Data.Entity.Migrations;
-
-    internal sealed class Configuration : DbMigrationsConfiguration<UamTTA.Storage.UamTTAContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<UamTTAContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(UamTTA.Storage.UamTTAContext context)
+        protected override void Seed(UamTTAContext context)
         {
             //  This method will be called after migrating to the latest version.
 

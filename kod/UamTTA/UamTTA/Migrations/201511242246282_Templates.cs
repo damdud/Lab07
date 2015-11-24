@@ -1,8 +1,7 @@
+using System.Data.Entity.Migrations;
+
 namespace UamTTA.Migrations
 {
-    using System;
-    using System.Data.Entity.Migrations;
-    
     public partial class Templates : DbMigration
     {
         public override void Up()
@@ -10,15 +9,14 @@ namespace UamTTA.Migrations
             CreateTable(
                 "dbo.BudgetTemplates",
                 c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        DefaultName = c.String(),
-                        DefaultDuration = c.Int(nullable: false),
-                    })
+                {
+                    Id = c.Int(false, true),
+                    DefaultName = c.String(),
+                    DefaultDuration = c.Int(false)
+                })
                 .PrimaryKey(t => t.Id);
-            
         }
-        
+
         public override void Down()
         {
             DropTable("dbo.BudgetTemplates");

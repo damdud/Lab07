@@ -1,9 +1,11 @@
-﻿namespace UamTTA.Api.Models
+﻿using UamTTA.Model;
+
+namespace UamTTA.Api.Models
 {
     public class TemplateModel
     {
         public string Name { get; set; }
-        
-        public Duration Duration { get; set; } 
+
+        public Duration Duration { get; set; }
     }
 }

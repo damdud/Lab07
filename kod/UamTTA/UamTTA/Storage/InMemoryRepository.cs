@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using UamTTA.Model;
 
 namespace UamTTA.Storage
 {
@@ -11,7 +11,7 @@ namespace UamTTA.Storage
 
         public InMemoryRepository()
         {
-            _idGenerator = Enumerable.Range(1, Int32.MaxValue).GetEnumerator();
+            _idGenerator = Enumerable.Range(1, int.MaxValue).GetEnumerator();
         }
 
         public IEnumerable<T> GetAll()
@@ -27,17 +27,11 @@ namespace UamTTA.Storage
 
         public T Persist(T item)
         {
-            var copy = (T)item.Clone();
+            var copy = (T) item.Clone();
             copy.Id = copy.Id.HasValue ? copy.Id : GetNextId();
             _storage[copy.Id.Value] = copy;
 
             return copy;
-        }
-
-        private int GetNextId()
-        {
-            _idGenerator.MoveNext();
-            return _idGenerator.Current;
         }
 
         public void Remove(T item)
@@ -46,6 +40,12 @@ namespace UamTTA.Storage
             {
                 _storage.Remove(item.Id.Value);
             }
+        }
+
+        private int GetNextId()
+        {
+            _idGenerator.MoveNext();
+            return _idGenerator.Current;
         }
     }
 }
