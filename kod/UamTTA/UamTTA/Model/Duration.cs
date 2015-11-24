@@ -1,4 +1,4 @@
-﻿namespace UamTTA
+﻿namespace UamTTA.Model
 {
     public enum Duration
     {

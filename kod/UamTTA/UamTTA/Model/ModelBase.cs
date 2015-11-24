@@ -1,4 +1,4 @@
-﻿namespace UamTTA
+﻿namespace UamTTA.Model
 {
     public abstract class ModelBase : IEntity
     {

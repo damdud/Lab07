@@ -1,29 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using UamTTA.Tools;
 
-namespace UamTTA
+namespace UamTTA.Model
 {
     public class Budget : ModelBase
     {
-        public Budget(
-            DateTime validFrom, DateTime validTo,
-            IEnumerable<Transfer> operations = null, IEnumerable<Account> relatedAccounts = null,
-            Account clearingAccount = null)
-        {
-            ValidFrom = validFrom;
-            ValidTo = validTo;
-            Operations = operations ?? Enumerable.Empty<Transfer>();
-            RelatedAccounts = relatedAccounts ?? Enumerable.Empty<Account>();
-        }
+        public DateTime ValidFrom { get; set; }
 
-        public DateTime ValidFrom { get; }
+        public DateTime ValidTo { get; set; }
 
-        public DateTime ValidTo { get; }
+        public IEnumerable<Account> RelatedAccounts { get; set; }
 
-        public IEnumerable<Account> RelatedAccounts { get; }
-
-        public IEnumerable<Transfer> Operations { get; }
+        public IEnumerable<Transfer> Operations { get; set; }
 
         public override string ToString()
         {

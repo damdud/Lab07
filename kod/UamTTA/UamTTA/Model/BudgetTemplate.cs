@@ -1,26 +1,25 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using UamTTA.Tools;
 
-namespace UamTTA
+namespace UamTTA.Model
 {
     public class BudgetTemplate : ModelBase
     {
-        public BudgetTemplate(Duration defaultDuration, string defaultName, IEnumerable<Account> defaultAccounts = null)
+        public BudgetTemplate()
         {
-            DefaultAccounts = defaultAccounts ?? Enumerable.Empty<Account>();
-            DefaultDuration = defaultDuration;
-            DefaultName = defaultName;
+            Accounts = Enumerable.Empty<Account>();
         }
 
-        public string DefaultName { get; }
+        public string Name { get; set; }
 
-        public IEnumerable<Account> DefaultAccounts { get; }
+        public IEnumerable<Account> Accounts { get; set; }
 
-        public Duration DefaultDuration { get; }
+        public Duration Duration { get; set; }
 
         public override string ToString()
         {
-            return $"DefaultName: {DefaultName}, DefaultAccounts: {DefaultAccounts.ToElementsString()}, DefaultDuration: {DefaultDuration}";
+            return $"Name: {Name}, Accounts: {Accounts.ToElementsString()}, Duration: {Duration}";
         }
     }
 }

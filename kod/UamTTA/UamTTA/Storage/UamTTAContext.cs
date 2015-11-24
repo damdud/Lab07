@@ -1,5 +1,6 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration;
+using UamTTA.Model;
 
 namespace UamTTA.Storage
 {
@@ -7,7 +8,6 @@ namespace UamTTA.Storage
     {
         public UamTTAContext() : base("UamTTAContext")
         {
-            
         }
 
         public DbSet<Account> Accounts { get; set; }
