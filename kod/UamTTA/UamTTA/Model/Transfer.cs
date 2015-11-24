@@ -17,19 +17,23 @@ namespace UamTTA
             Reference = reference;
         }
 
-        public Budget Budget { get; }
+        public Transfer()
+        {
+        }
 
-        public Account SourceAccount { get; }
+        public Budget Budget { get; set; }
 
-        public Account DestinationAccount { get; }
+        public Account SourceAccount { get; set; }
 
-        public decimal Amount { get; }
+        public Account DestinationAccount { get; set; }
 
-        public DateTime? PlannedDate { get; }
+        public decimal Amount { get; set; }
 
-        public DateTime? TransferDate { get; }
+        public DateTime? PlannedDate { get; set; }
 
-        public string Reference { get; }
+        public DateTime? TransferDate { get; set; }
+
+        public string Reference { get; set; }
 
         public override string ToString()
         {

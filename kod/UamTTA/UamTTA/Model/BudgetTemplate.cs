@@ -12,11 +12,15 @@ namespace UamTTA
             DefaultName = defaultName;
         }
 
-        public string DefaultName { get; }
+        public BudgetTemplate()
+        {
+        }
 
-        public IEnumerable<Account> DefaultAccounts { get; }
+        public string DefaultName { get; set; }
 
-        public Duration DefaultDuration { get; }
+        public IEnumerable<Account> DefaultAccounts { get; set; }
+
+        public Duration DefaultDuration { get; set; }
 
         public override string ToString()
         {

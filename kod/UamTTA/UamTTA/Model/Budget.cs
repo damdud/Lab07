@@ -17,13 +17,17 @@ namespace UamTTA
             RelatedAccounts = relatedAccounts ?? Enumerable.Empty<Account>();
         }
 
-        public DateTime ValidFrom { get; }
+        public Budget()
+        {
+        }
 
-        public DateTime ValidTo { get; }
+        public DateTime ValidFrom { get; set; }
 
-        public IEnumerable<Account> RelatedAccounts { get; }
+        public DateTime ValidTo { get; set; }
 
-        public IEnumerable<Transfer> Operations { get; }
+        public IEnumerable<Account> RelatedAccounts { get; set; }
+
+        public IEnumerable<Transfer> Operations { get; set; }
 
         public override string ToString()
         {

@@ -50,9 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IBudgetFactory.cs" />
     <Compile Include="Migrations\201511112210260_Init.cs" />
     <Compile Include="Migrations\201511112210260_Init.Designer.cs">
       <DependentUpon>201511112210260_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511242210233_BudgetTransfer.cs" />
+    <Compile Include="Migrations\201511242210233_BudgetTransfer.Designer.cs">
+      <DependentUpon>201511242210233_BudgetTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511242246282_Templates.cs" />
+    <Compile Include="Migrations\201511242246282_Templates.Designer.cs">
+      <DependentUpon>201511242246282_Templates.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Account.cs" />
@@ -77,6 +86,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201511112210260_Init.resx">
       <DependentUpon>201511112210260_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511242210233_BudgetTransfer.resx">
+      <DependentUpon>201511242210233_BudgetTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511242246282_Templates.resx">
+      <DependentUpon>201511242246282_Templates.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

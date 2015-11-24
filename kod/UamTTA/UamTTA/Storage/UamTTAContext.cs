@@ -1,5 +1,4 @@
 ﻿using System.Data.Entity;
-using System.Data.Entity.ModelConfiguration;
 
 namespace UamTTA.Storage
 {
@@ -7,23 +6,14 @@ namespace UamTTA.Storage
     {
         public UamTTAContext() : base("UamTTAContext")
         {
-            
         }
 
         public DbSet<Account> Accounts { get; set; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-            modelBuilder.Configurations.Add(new AccountConfiguration());
-        }
+        public DbSet<Budget> Budgets { get; set; }
 
-        public sealed class AccountConfiguration : EntityTypeConfiguration<Account>
-        {
-            public AccountConfiguration()
-            {
-                HasKey(x => x.Id);
-            }
-        }
+        public DbSet<Transfer> Transfers { get; set; }
+
+        public DbSet<BudgetTemplate> Templates { get; set; }
     }
 }

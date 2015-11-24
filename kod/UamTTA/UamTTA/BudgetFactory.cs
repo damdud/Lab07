@@ -2,7 +2,7 @@
 
 namespace UamTTA
 {
-    public class BudgetFactory
+    public class BudgetFactory : IBudgetFactory
     {
         public Budget CreateBudget(BudgetTemplate template, DateTime startDate)
         {

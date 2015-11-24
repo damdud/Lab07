@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UamTTA", "UamTTA\UamTTA.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UamTTA.Tests", "UamTTA.Tests\UamTTA.Tests.csproj", "{A9D7CE9A-ADFE-4739-B95E-89AB474101B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UamTTA.Api", "UamTTA.Api\UamTTA.Api.csproj", "{D88A4F40-22C5-4E02-A841-1C7DEB650484}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A9D7CE9A-ADFE-4739-B95E-89AB474101B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9D7CE9A-ADFE-4739-B95E-89AB474101B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9D7CE9A-ADFE-4739-B95E-89AB474101B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D88A4F40-22C5-4E02-A841-1C7DEB650484}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D88A4F40-22C5-4E02-A841-1C7DEB650484}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D88A4F40-22C5-4E02-A841-1C7DEB650484}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D88A4F40-22C5-4E02-A841-1C7DEB650484}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
