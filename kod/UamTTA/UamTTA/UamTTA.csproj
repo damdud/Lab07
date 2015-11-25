@@ -63,6 +63,10 @@
     <Compile Include="Migrations\201511242246282_Templates.Designer.cs">
       <DependentUpon>201511242246282_Templates.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201511251749296_UpdateStructure.cs" />
+    <Compile Include="Migrations\201511251749296_UpdateStructure.Designer.cs">
+      <DependentUpon>201511251749296_UpdateStructure.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Account.cs" />
     <Compile Include="Model\Budget.cs" />
@@ -94,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201511242246282_Templates.resx">
       <DependentUpon>201511242246282_Templates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511251749296_UpdateStructure.resx">
+      <DependentUpon>201511251749296_UpdateStructure.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
