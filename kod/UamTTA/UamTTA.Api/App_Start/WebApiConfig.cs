@@ -32,7 +32,8 @@ namespace UamTTA.Api
         {
             builder.Register(_ => new UamTTAContext()).As<UamTTAContext>();
             builder.RegisterType<BudgetFactory>().As<IBudgetFactory>();
-            builder.RegisterGeneric(typeof (Repository<>)).As(typeof (IRepository<>));
+            builder.RegisterGeneric(typeof(Repository<>)).As(typeof(IRepository<>));
+            builder.RegisterType<BudgetService>().As<IBudgetService>();
         }
     }
 }
