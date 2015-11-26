@@ -26,7 +26,7 @@ namespace UamTTA.Tests.Services
         private IRepository<BudgetTemplate> _templateRepository;
 
         [Test]
-        public void Create_Budget_Should_Create_Budget_Using_Factory()
+        public void Create_Budget_By_Template_Should_Create_Budget_Using_Factory()
         {
             var someTemplate = new BudgetTemplate();
             var someDate = DateTime.Today;
@@ -38,7 +38,7 @@ namespace UamTTA.Tests.Services
         }
 
         [Test]
-        public void Should_Persist_Created_Budget_In_Repository()
+        public void Create_Budget_By_Template_Should_Persist_Created_Budget_In_Repository()
         {
             var someBudget = new Budget();
             A.CallTo(() => _budgetFactory.CreateBudget(A<BudgetTemplate>._, A<DateTime>._))
@@ -50,7 +50,7 @@ namespace UamTTA.Tests.Services
         }
 
         [Test]
-        public void Create_Budget_Should_Create_Budget_Using_Factory_by()
+        public void Create_Budget_By_Template_Id_Should_Get_Template_From_Repository()
         {
             var someTemplateId = 1;
             var someDate = DateTime.Today;
@@ -62,7 +62,7 @@ namespace UamTTA.Tests.Services
         }
 
         [Test]
-        public void Create_Budget_Should_Create_Budget_Using_Factory_byId()
+        public void Create_Budget_By_Template_Id_Should_Create_Budget_Using_Factory()
         {
             var someTemplateId = 1;
             var someDate = DateTime.Today;
@@ -74,7 +74,7 @@ namespace UamTTA.Tests.Services
         }
 
         [Test]
-        public void Should_Persist_Created_Budget_In_Repository_byid()
+        public void Create_Budget__By_Template_Id_Should_Persist_Created_Budget_In_Repository()
         {
             var someBudget = new Budget();
             A.CallTo(() => _budgetFactory.CreateBudget(A<BudgetTemplate>._, A<DateTime>._))
