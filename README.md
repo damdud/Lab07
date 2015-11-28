@@ -24,7 +24,7 @@ Do kontaktu z bazą danych będziemy używać Entity Framework w wersji 6.x. Mat
 Nasze API będzie wystawione poprzez ASP.NET MVC 5 / WebAPI 2 i będzie zgodne z protokołem REST. Materiały:
 * [Protokół REST](https://en.wikipedia.org/wiki/Representational_state_transfer)
 * [Narzędzie do testowania wywołań REST z Chrome - Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop)
-* TODO - info o ASP
+* [Tutorial ASP.NET Web API 2](http://www.asp.net/web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api)
 
 Kod powstały na zajęciach będzie budowany przez build server TeamCity:
 * [Informacje o TeamCity](https://www.jetbrains.com/teamcity/)
