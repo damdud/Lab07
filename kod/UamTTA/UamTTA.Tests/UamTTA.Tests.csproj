@@ -70,6 +70,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\UamTTA.Api\UamTTA.Api.csproj">
+      <Project>{d88a4f40-22c5-4e02-a841-1c7deb650484}</Project>
+      <Name>UamTTA.Api</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UamTTA\UamTTA.csproj">
       <Project>{155ECD66-7F29-453D-B0FA-A2F141AD9512}</Project>
       <Name>UamTTA</Name>
